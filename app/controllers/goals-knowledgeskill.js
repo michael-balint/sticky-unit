@@ -1,8 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  section: "goals-knowledgeskill",
+
   stickies: function() {
-    return this.store.find("sticky");
+    return this.store.find("sticky", {section: this.get("section")});
   }.property(),
 
   freshSticky: function() {
