@@ -1,3 +1,43 @@
-html, body {
-  margin: 20px;
+html{}
+
+body{
+	background-image:url('/img/woodBackground.jpg');
+
+}
+
+.whiteboard {
+	background-color: #FFFFFF;
+}
+
+#logo {
+	margin-top: 20px;
+	margin-left: -10px;
+	transform:rotate(7deg);
+	-ms-transform:rotate(7deg); /* IE 9 */
+	-webkit-transform:rotate(7deg); /* Opera, Chrome, and Safari */
+}
+
+.sticky {
+	background:#ffc;
+	height:14em;
+	width:14em;
+	-moz-box-shadow:5px 5px 7px rgba(33,33,33,1); /* Firefox */
+	-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7); /* Safari+Chrome */
+	box-shadow: 5px 5px 7px rgba(33,33,33,.7); /* Opera */
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
 }
