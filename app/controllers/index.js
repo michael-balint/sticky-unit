@@ -13,9 +13,8 @@ export default Ember.Controller.extend({
       this.store.createRecord('sticky', {
         text: "",
         section: "",
-        color: "#000",
         fresh: true
-      })
+      });
     }
   }.observes('stickies.@each.text'),
 
