@@ -1,22 +1,21 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.ArrayController.extend({
   section: "goals-knowledgeskill",
 
-  stickies: function() {
-    return this.store.find("sticky", {section: this.get("section")});
-  }.property(),
-
-  freshSticky: function() {
-    var freshSticky = this.get('stickies').filterBy('fresh').get('firstObject');
-    if(freshSticky && freshSticky.get('text') !== "") {
-      freshSticky.set('fresh', false);
+  freshStickyObserver: function() {
+    var section = this.get("section");
+    var list = this;
+    var freshSticky = this.filterBy("fresh", true).get("firstObject");
+    if(freshSticky && freshSticky.get("text.length")) {
+      freshSticky.set("fresh", false);
       freshSticky.save();
-      this.store.createRecord('sticky', {
+      var newSticky = this.store.createRecord('sticky', {
         text: "",
-        section: "",
+        section: section,
         fresh: true
       });
+      list.get("content").pushObject(newSticky);
     }
-  }.observes('stickies.@each.text')
+  }.observes('@each.text')
 });

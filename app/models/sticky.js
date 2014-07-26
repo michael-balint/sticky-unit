@@ -10,7 +10,8 @@ Sticky.reopenClass({
   FIXTURES: [
     { id: 1, text: "some text", section: "goals-knowledgeskill", fresh: false },
     { id: 2, text: "some text 2", section: "goals-knowledgeskill", fresh: false },
-    { id: 3, text: "", section: "goals-knowledgeskill", fresh: true }
+    { id: 3, text: "", section: "goals-knowledgeskill", fresh: true },
+    { id: 4, text: "some text", section: "", fresh: false }
   ]
 });
 
