@@ -1,8 +1,9 @@
 html{}
 
-body{
-	background-image:url('/img/woodBackground.jpg');
+body{}
 
+.index {
+  background-image:url('/img/woodBackground.jpg');
 }
 
 .whiteboard {
