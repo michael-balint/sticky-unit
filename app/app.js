@@ -9,6 +9,8 @@ var App = Ember.Application.extend({
   Resolver: Resolver
 });
 
+App.ApplicationAdapter = DS.FixtureAdapter({});
+
 loadInitializers(App, 'sticky-unit');
 
 export default App;
