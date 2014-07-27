@@ -60,8 +60,12 @@ h3, b {
   font-size: 16px;
 }
 
-.header {
+.header, .footer {
   margin: 20px;
+}
+
+.btn-export {
+  font-size: 24px;
 }
 
 .logo {

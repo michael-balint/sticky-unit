@@ -5,7 +5,8 @@ export default Ember.Route.extend({
     openModal: function(modalName, outlet) {
       return this.render(modalName, {
         into: 'application',
-        outlet: outlet
+        outlet: outlet,
+        controller: 'index'
       });
     },
 
@@ -28,7 +29,7 @@ export default Ember.Route.extend({
     closeModal: function() {
       return this.disconnectOutlet({
         outlet: 'modal',
-        parentView: 'application'
+        parentView: 'application',
       });
     },
 
