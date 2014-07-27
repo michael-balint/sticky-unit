@@ -10,21 +10,23 @@
       <img height="80" src="/img/StickyUnitLogo.png">
     </a>
   </div>
-  <div class="header row">
-    <div class="panel panel-info panel-standards">
-      <div class="panel-heading cursor-pointer" data-toggle="collapse" href="#collapseStandards">
-        <h4 class="panel-title">
-          {{unit.standard}}
-          <span class="pull-right glyphicon glyphicon-chevron-down"></span>
-        </h4>
-      </div>
-      <div id="collapseStandards" class="panel-collapse collapse">
-        <div class="panel-body">
-          {{unit.detail}}
+  {{#if unit.standard}}
+    <div class="header row">
+      <div class="panel panel-info panel-standards">
+        <div class="panel-heading cursor-pointer" data-toggle="collapse" href="#collapseStandards">
+          <h4 class="panel-title">
+            {{unit.standard}}
+            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+          </h4>
+        </div>
+        <div id="collapseStandards" class="panel-collapse collapse">
+          <div class="panel-body">
+            {{unit.detail}}
+          </div>
         </div>
       </div>
-    </div>
   </div>
+  {{/if}}
 
   <div class="whiteboard">
     <div class="row">
@@ -36,8 +38,10 @@
 
       <div class="col-md-4">
         <b class="section-title">Knowledge and Skills</b><br>
-        <span><a href="home-route">What are Knowledge and Skills?
-        <img height="20" src="/img/videocamera.png"></a></span>
+        <a href="home-route">
+          What are Knowledge and Skills?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
         {{view 'stickystack' section="goals-knowledgeskill"}}
         {{!--
         <div {{action 'openModal' 'template_name' 'modal3'}}>test</div>
@@ -49,15 +53,19 @@
 
       <div class="col-md-4">
         <b class="section-title">Enduring Understandings</b><br>
-        <span><a href="home-route">What are Enduring Understandings?
-        <img height="20" src="/img/videocamera.png"></a></span>
+        <a href="home-route">
+          What are Enduring Understandings?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
         {{view 'stickystack' section="goals-enduringunderstanding"}}
       </div>
 
       <div class="col-md-4">
         <b class="section-title">Big Idea</b><br>
-        <span><a href="home-route">What is a Big Idea? <img height="20" src=
-        "/img/videocamera.png"></a></span>
+        <a href="home-route">
+          What is a Big Idea?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
 
         {{view 'stickystack' section="goals-bigidea"}}
       </div>
@@ -72,24 +80,30 @@
 
       <div class="col-md-4">
         <b class="section-title">Evidence of Knowledge and Skills</b><br>
-        <span><a href="home-route">How do I create this evidence?
-        <img height="20" src="/img/videocamera.png"></a></span>
+        <a href="home-route">
+          How do I create this evidence?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
 
         {{view 'stickystack' section="evidence-knowledge"}}
       </div>
 
       <div class="col-md-4">
         <b class="section-title">Evidence of Understandings</b><br>
-        <span><a href="home-route">How do I create this evidence?
-        <img height="20" src="/img/videocamera.png"></a></span>
+        <a href="home-route">
+          How do I create this evidence?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
 
         {{view 'stickystack' section="evidence-understanding"}}
       </div>
 
       <div class="col-md-4">
         <b class="section-title">Evidence of Big Idea</b><br>
-        <span><a href="home-route">How do I create this evidence?
-        <img height="20" src="/img/videocamera.png"></a></span>
+        <a href="home-route">
+          How do I create this evidence?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
 
         {{view 'stickystack' section="evidence-bigidea"}}
       </div>
@@ -102,24 +116,32 @@
 
       <div class="col-md-4">
         <b class="section-title">Performance Tasks</b><br>
-        <span><a href="home-route">What are performance tasks? <img height=
-        "20" src="/img/videocamera.png"></a></span>
+        <a href="home-route">
+          What are performance tasks?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
+
 
         {{view 'stickystack' section="assessments-performancetasks"}}
       </div>
 
       <div class="col-md-4">
         <b class="section-title">Academic Prompts</b><br>
-        <span><a href="home-route">What are academic prompts? <img height=
-        "20" src="/img/videocamera.png"></a></span>
+        <a href="home-route">
+          What are academic prompts?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
+
 
         {{view 'stickystack' section="assessments-academicprompts"}}
       </div>
 
       <div class="col-md-4">
         <b class="section-title">Quizzes and Tests</b><br>
-        <span><a href="home-route">What are quizzes/tests? <img height="20"
-        src="/img/videocamera.png"></a></span>
+        <a href="home-route">
+          What are quizzes/tests?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
 
         {{view 'stickystack' section="assessments-quiztest"}}
       </div>
@@ -131,8 +153,10 @@
       </div>
 
       <div class="col-md-12">
-        <span><a href="home-route">How do I create learning activities?
-        <img height="20" src="/img/videocamera.png"></a></span>
+        <a href="home-route">
+          How do I create learning activities?
+          <i class="glyphicon glyphicon-facetime-video"></i>
+        </a>
 
         {{view 'stickystack' section="activities-listofassessments"}}
       </div>

@@ -17,7 +17,7 @@ var Unit = DS.Model.extend({
 
 Unit.reopenClass({
   FIXTURES: [
-    { id: "main-unit", title: "", standard: "test", detail: "test" }
+    { id: "main-unit", title: "", standard: "", detail: "" }
   ]
 });
 
