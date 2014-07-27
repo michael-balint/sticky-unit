@@ -1,5 +1,10 @@
-.popup-modal {
+.fixed-modal {
   position: fixed;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.popup-modal {
   z-index: 100;
   width: 90%;
   height: 90%;
@@ -9,19 +14,15 @@
 }
 
 .top-modal {
-  position: fixed;
   z-index: 200;
   width: 80%;
   height: 80%;
   left: 10%;
   top: 10%;
-  padding: 20px;
 }
 
 .paper-modal {
-  padding: 20px;
   background-color: #fff;
-  position: fixed;
   z-index: 200;
   width: 50%;
   height: 90%;
