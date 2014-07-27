@@ -30,6 +30,14 @@ export default Ember.Route.extend({
         outlet: 'modal',
         parentView: 'application'
       });
+    },
+
+    populateStandard: function(standard, detail) {
+      this.store.find('unit', 'main-unit').then(function(unit) {
+        unit.set('standard', standard);
+        unit.set('detail', detail);
+      });
+      this.send('closeModal');
     }
   }
 });

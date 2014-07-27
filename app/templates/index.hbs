@@ -3,7 +3,7 @@
     <span class="title">
       Unit: {{input valueBinding="unit.title" class="title-input" sizeBinding="unit.titleLength"}}
     </span>
-    <button class="btn btn-warning btn-standards">Choose my standards</button>
+    <button class="btn btn-warning btn-standards" {{action 'openModal' 'standards' 'modal'}}>Choose my standards</button>
   </div>
   <div class="logo">
     <a href="/">
