@@ -7,8 +7,8 @@ export default Ember.View.extend({
 
   stickies: function() {
     var section = this.get('section');
-    return this.get('controller').get('store').filter("sticky", {section: section}, function(sticky) {
-      return sticky.get("section") === section;
+    return this.get('controller').get('store').filter("sticky", {section: section, fresh: false}, function(sticky) {
+      return sticky.get("section") === section && sticky.get("fresh") === false;
     });
   }.property('section')
 
