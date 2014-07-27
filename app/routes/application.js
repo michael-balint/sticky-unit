@@ -2,20 +2,26 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
-    openModal: function(modalName) {
+    openModal: function(modalName, outlet) {
       return this.render(modalName, {
         into: 'application',
-        outlet: 'modal'
+        outlet: outlet
       });
     },
 
-    openStickyListModal: function(modalName) {
+    openStickyListModal: function(modalName, outlet) {
       var stickylistController = this.controllerFor('stickylist');
-      stickylistController.set("section", modalName);
-      return this.render(modalName, {
-        into: 'application',
-        outlet: 'modal',
-        controller: stickylistController
+      var route = this;
+      this.store.filter("sticky", {section: modalName}, function(sticky) {
+        return sticky.get("section") === modalName;
+      }).then(function(stickies) {
+        stickylistController.set("section", modalName);
+        stickylistController.set("content", stickies);
+        route.render(modalName, {
+          into: 'application',
+          outlet: outlet,
+          controller: stickylistController
+        });
       });
     },
 

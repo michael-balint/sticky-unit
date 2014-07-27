@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.View.extend({
-  tagName: 'span',
-  templateName: 'views/sticky',
+  indexClass: function() {
+    return "rotate-" + this.get('_parentView.contentIndex');
+  }.property()
 });

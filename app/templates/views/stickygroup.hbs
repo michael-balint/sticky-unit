@@ -1,0 +1,9 @@
+<div {{action 'openStickyListModal' view.section 'modal'}} class="stack">
+  {{#each view.stickies}}
+    {{#view "sticky" contentBinding="this"}}
+      <div {{bind-attr class=":stacked-sticky view.indexClass"}}>
+        {{text}}
+      </div>
+    {{/view}}
+  {{/each}}
+</div>
