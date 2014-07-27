@@ -6,7 +6,7 @@
           <li class="unit-title"><h1>Unit Title</h1></li>
           <li>
             <ul class="list-inline">
-              <li><button class="btn btn-default btn-block choose-content" type="button">Choose
+              <li><button class="btn btn-default btn-block choose-content" {{action 'openModal' 'standards' 'modal3'}}>Choose
               Standards</button>
               </li>
               <li class="full-width">
@@ -70,7 +70,8 @@
         <b class="section-title">Enduring Understandings</b><br>
         <span><a href="home-route">What are Enduring Understandings?
         <img height="20" src="/img/videocamera.png"></a></span>
-        <div class="sticky center-block cursor-pointer"></div>
+        {{view 'stickygroup' section="goals-enduringunderstanding"}}
+        {{!-- <div class="sticky center-block cursor-pointer"></div> --}}
       </div>
       <div class="col-md-4">
         <b class="section-title">Big Idea</b><br>
