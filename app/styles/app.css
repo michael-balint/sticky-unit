@@ -2,10 +2,27 @@
   position: absolute;
   z-index: 100;
   width: 90%;
-  height: 90%;
+  height: 50%;
   left: 5%;
   top: 5%;
   background-color: #fff;
+  overflow: scroll;
+  border: gray;
+  border-style: solid;
+  border-radius: 8px;
+}
+
+.top-modal {
+  position: absolute;
+  z-index: 2;
+  width: 80%;
+  height: 80%;
+  left: 5%;
+  top: 5%;
+  background-color: #fff;
+  border: gray;
+  border-style: solid;
+  border-radius: 8px;
 }
 
 .index {
@@ -21,13 +38,12 @@ h3, b {
   font-family: 'Marker Felt', 'Comic Sans' sans-serif;
 }
 
-.sticky-modal-header {
-  width: 100%;
-  display: inline-block;
-}
-
 .section-title {
   font-size: 16px;
+}
+
+.sticky-modal-header {
+  padding: 10px 10px 0px;
 }
 
 .header {
@@ -157,8 +173,22 @@ a:active {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.inspire{
+  background-color: #CDEFFF;
+}
+
+
 /* sections */
 
 .goals-knowledgeskill {
-  padding: 20px;
+  padding: 10px 20px 20px;
 }
+
+
+
+
+
+
+
+

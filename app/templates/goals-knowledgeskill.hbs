@@ -1,19 +1,23 @@
 <div class="popup-modal">
-	<div class="sticky-modal-header">
-		<div>
-			<b>Section Title</b><br />
- 			<span><a href="home-route"> Section Question <img src="/img/videocamera.png" height="20"></a></span>
- 		</div>
- 		<div>
- 			<button type="button" class="btn btn-default">Inspire Me <img src="/img/starperson.png" height="20"></button>
-		</div>
-		<div>
-			<span class="glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal'}}></span>
- 		</div>
- 	</div>
+  <div class="sticky-modal-header">
+    <ul class="list-inline">
+      <li>
+        <ul class="list-unstyled">
+          <li><b class="section-title">Section Title</b></li>
+          <li> <span><a href="home-route"> Section Question <img src="/img/videocamera.png" height="20"></a></span></li>
+        </ul>
+      </li>
+      <li>
+        <button type="button" class="btn btn-default inspire">Inspire Me <img src="/img/starperson.png" height="20"></button>
+      </li>
+      <li class="pull-right">
+        <span class="glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal'}}></span>
+      </li>
+    </ul>
+   </div>
   <div class="goals-knowledgeskill">
     {{#each}}
-      {{textarea valueBinding="text" classNames="sticky"}}
+    {{textarea valueBinding="text" classNames="sticky"}}
     {{/each}}
   </div>
 </div>
