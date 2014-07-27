@@ -1,37 +1,33 @@
 <div class="container-fluid index">
   <div class="header row">
-    <ul class="list-inline">
-      <li>
-        <h1>Unit Title</h1>
-      </li>
-
-      <li>
-        <ul class="list-unstyled">
-          <li><button class="btn btn-default btn-block" type="button">Choose
-          Standards</button></li>
-
-          <li><button class="btn btn-default btn-block" type="button">Choose
-          Practices</button></li>
-        </ul>
-      </li>
-
-      <li>
-        <ul class="list-unstyled">
-          <li><button class="btn btn-default btn-block dropdown-toggle"
-          data-toggle="dropdown" id="dropdownMenu1" type="button">Cluster
-          Title</button></li>
-
-          <li><button class="btn btn-default btn-block dropdown-toggle"
-          data-toggle="dropdown" id="dropdownMenu1" type="button">Practice
-          Title</button></li>
-        </ul>
-      </li>
-
-      <li class="pull-right">
-        <a href="home-route"><img height="80" id="logo" src=
-        "/img/StickyUnitLogo.png"></a>
-      </li>
-    </ul>
+    <span class="title">
+      Unit: {{input valueBinding="unit.title" class="title-input" sizeBinding="unit.titleLength"}}
+    </span>
+    <button class="btn btn-warning btn-standards">Choose my standards</button>
+  </div>
+  <div class="logo">
+    <a href="/">
+      <img height="80" src="/img/StickyUnitLogo.png">
+    </a>
+  </div>
+  <div class="header row">
+    {{#if unit.standard}}
+      <div class="panel panel-primary panel-standards">
+        <div class="panel-heading cursor-pointer" data-toggle="collapse" data-parent="#accordion" href="#collapseStandards">
+          <h4 class="panel-title">
+            {{unit.standard}}
+          </h4>
+          <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+        </div>
+        <div id="collapseStandards" class="panel-collapse collapse">
+          <div class="panel-body">
+            {{unit.detail}}
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <button class="btn btn-primary">Choose a Standard</button>
+    {{/if}}
   </div>
 
   <div class="whiteboard">
