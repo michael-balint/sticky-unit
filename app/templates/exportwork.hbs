@@ -1,9 +1,14 @@
-<div class="popup-modal">
-  {{unit.title}}
-  {{unit.standard}}
-  {{unit.detail}}
+<div class="paper-modal paper">
+  <div class="pull-right">
+    <span class="glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal'}}></span>
+  </div>
+  <div>
+    {{unit.title}}
+    {{unit.standard}}
+    {{unit.detail}}
 
-  {{#each goalsKnowledgeSkillStickies}}
-    {{text}}
-  {{/each}}
+    {{#each goalsKnowledgeSkillStickies}}
+      {{text}}
+    {{/each}}
+  </div>
 </div>
