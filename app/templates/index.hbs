@@ -1,149 +1,138 @@
 <div class="container-fluid index">
-  <div class="header row">
+  <div class="header">
     <ul class="list-inline">
-      <li>
-        <h1>Unit Title</h1>
-      </li>
-
-      <li>
+      <li class="sixty-percent">
         <ul class="list-unstyled">
-          <li><button class="btn btn-default btn-block" type="button">Choose
-          Standards</button></li>
-
-          <li><button class="btn btn-default btn-block" type="button">Choose
-          Practices</button></li>
+          <li class="unit-title"><h1>Unit Title</h1></li>
+          <li>
+            <ul class="list-inline">
+              <li><button class="btn btn-default btn-block choose-content" type="button">Choose
+              Standards</button>
+              </li>
+              <li class="full-width">
+                <div class="dropdown">
+                  <button class="btn btn-default btn-block dropdown-toggle standard-drop"
+                  data-toggle="dropdown" id="dropdownMenu1" type="button">Standard Cluster <span class="caret"></span></button>
+                  
+                </div>
+              </li>
+            </ul>
+          </li>
         </ul>
       </li>
-
-      <li>
+      <li class="thirtynine-percent">
         <ul class="list-unstyled">
-          <li><button class="btn btn-default btn-block dropdown-toggle"
-          data-toggle="dropdown" id="dropdownMenu1" type="button">Cluster
-          Title</button></li>
-
-          <li><button class="btn btn-default btn-block dropdown-toggle"
-          data-toggle="dropdown" id="dropdownMenu1" type="button">Practice
-          Title</button></li>
+          <li class="pull-right">
+            <a href="home-route"><img height="80" id="logo" src=
+            "/img/StickyUnitLogo.png"></a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-default btn-block dropdown-toggle standard-drop"
+              data-toggle="dropdown" id="dropdownMenu2" type="button">Math Practices <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.illustrativemathematics.org/MP1" target="_blank">1 — Make Sense of Problems and Persevere in Solving Them</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.illustrativemathematics.org/MP2" target="_blank">2 — Reason Abstractly and Quantitatively</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.illustrativemathematics.org/MP3" target="_blank">3 — Construct Viable Arguments and Critique the Reasoning of Others</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.illustrativemathematics.org/MP4" target="_blank">4 — Model With Mathematics</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.illustrativemathematics.org/MP5" target="_blank">5 — Use Appropriate Tools Strategically</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.illustrativemathematics.org/MP6" target="_blank">6 — Attend to Precision</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.illustrativemathematics.org/MP7" target="_blank">7 — Look For and Make Use of Structure</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.illustrativemathematics.org/MP8" target="_blank">8 — Look For and Express Regularity in Repeated Reasoning</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
-      </li>
-
-      <li class="pull-right">
-        <a href="home-route"><img height="80" id="logo" src=
-        "/img/StickyUnitLogo.png"></a>
       </li>
     </ul>
+
   </div>
-
   <div class="whiteboard">
-    <div class="row">
-      <!-- GOALS ROW -->
-
+    <div class="row"><!-- GOALS ROW -->
       <div class="col-md-12 heading">
         <h3>GOALS</h3>
       </div>
-
       <div class="col-md-4">
         <b class="section-title">Knowledge and Skills</b><br>
         <span><a href="home-route">What are Knowledge and Skills?
         <img height="20" src="/img/videocamera.png"></a></span>
+
         {{view 'stickygroup' section="goals-knowledgeskill"}}
         {{!--
         <div {{action 'openModal' 'template_name' 'modal3'}}>test</div>
         --}}
         {{!-- <div class="sticky center-block cursor-pointer" {{action 'openStickyListModal' 'goals-knowledgeskill' 'modal'}}>
+        <div class="sticky center-block cursor-pointer" {{action 'openStickyListModal' 'goals-knowledgeskill'}}>
           goals-knowledgeskill
         </div> --}}
       </div>
-
       <div class="col-md-4">
         <b class="section-title">Enduring Understandings</b><br>
         <span><a href="home-route">What are Enduring Understandings?
         <img height="20" src="/img/videocamera.png"></a></span>
-
-        <div class="sticky center-block"></div>
+        <div class="sticky center-block cursor-pointer"></div>
       </div>
-
       <div class="col-md-4">
         <b class="section-title">Big Idea</b><br>
         <span><a href="home-route">What is a Big Idea? <img height="20" src=
         "/img/videocamera.png"></a></span>
-
-        <div class="sticky center-block"></div>
+        <div class="sticky center-block cursor-pointer"></div>
       </div>
     </div>
-
-    <div class="row">
-      <!-- EVIDENCE ROW -->
-
+    <div class="row"> <!-- EVIDENCE ROW -->
       <div class="col-md-12 heading">
         <h3>EVIDENCE</h3>
       </div>
-
       <div class="col-md-4">
         <b class="section-title">Evidence of Knowledge and Skills</b><br>
         <span><a href="home-route">How do I create this evidence?
         <img height="20" src="/img/videocamera.png"></a></span>
-
-        <div class="sticky center-block"></div>
+        <div class="sticky center-block cursor-pointer"></div>
       </div>
-
       <div class="col-md-4">
         <b class="section-title">Evidence of Understandings</b><br>
         <span><a href="home-route">How do I create this evidence?
         <img height="20" src="/img/videocamera.png"></a></span>
-
-        <div class="sticky center-block"></div>
+        <div class="sticky center-block cursor-pointer"></div>
       </div>
-
       <div class="col-md-4">
         <b class="section-title">Evidence of Big Idea</b><br>
         <span><a href="home-route">How do I create this evidence?
         <img height="20" src="/img/videocamera.png"></a></span>
-
-        <div class="sticky center-block"></div>
+        <div class="sticky center-block cursor-pointer"></div>
       </div>
-    </div><!-- ASSESSMENTS ROW -->
-
-    <div class="row">
+    </div>
+    <div class="row"><!-- ASSESSMENTS ROW -->
       <div class="col-md-12 heading">
         <h3>ASSESSMENTS</h3>
       </div>
-
       <div class="col-md-4">
         <b class="section-title">Performance Tasks</b><br>
         <span><a href="home-route">What are performance tasks? <img height=
         "20" src="/img/videocamera.png"></a></span>
-
-        <div class="sticky center-block"></div>
+        <div class="sticky center-block cursor-pointer"></div>
       </div>
-
       <div class="col-md-4">
         <b class="section-title">Academic Prompts</b><br>
         <span><a href="home-route">What are academic prompts? <img height=
         "20" src="/img/videocamera.png"></a></span>
-
-        <div class="sticky center-block"></div>
+        <div class="sticky center-block cursor-pointer"></div>
       </div>
-
       <div class="col-md-4">
         <b class="section-title">Quizzes and Tests</b><br>
         <span><a href="home-route">What are quizzes/tests? <img height="20"
         src="/img/videocamera.png"></a></span>
-
-        <div class="sticky center-block"></div>
+        <div class="sticky center-block cursor-pointer"></div>
       </div>
-    </div><!-- LEARNING ACTIVITIES ROW -->
-
-    <div class="row">
+    </div>
+    <div class="row"><!-- LEARNING ACTIVITIES ROW -->
       <div class="col-md-12 heading">
         <h3>LEARNING ACTIVITIES</h3>
       </div>
-
       <div class="col-md-12">
         <span><a href="home-route">How do I create learning activities?
         <img height="20" src="/img/videocamera.png"></a></span>
-
-        <div class="sticky center-block"></div>
+        <div class="sticky center-block cursor-pointer"></div>
       </div>
     </div>
   </div>

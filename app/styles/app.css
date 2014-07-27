@@ -31,7 +31,7 @@
 
 .whiteboard {
   background-color: #FFFFFF;
-  padding: 10px;
+  padding: 0px 20px 20px;
 }
 
 h3, b {
@@ -42,17 +42,37 @@ h3, b {
   font-size: 16px;
 }
 
+.sixty-percent {
+  width: 60%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.thirtynine-percent {
+  width: 39%;
+  height: auto;
+  vertical-align: top;
+}
+
+.full-width {
+  width: 74%;
+}
+
+.unit-title {
+  margin-bottom: 20px;
+  color: #8D663A;
+}
+
 .sticky-modal-header {
   padding: 10px 10px 0px;
 }
 
 .header {
-  margin: 10px;
+  margin: 20px;
 }
 
 #logo {
-  margin-top: 15px;
-  margin-left: -10px;
+
   padding: 5px;
   transform: rotate(7deg);
   -ms-transform: rotate(7deg);
@@ -178,7 +198,14 @@ a:active {
   background-color: #CDEFFF;
 }
 
+.choose-content, .standard-drop {
+  background-color: #DE6A10;
+  color: #fff;
+}
 
+.btn.choose-content:hover, .btn.standard-drop:hover,  {
+  background-color: #F29A4E;
+}
 /* sections */
 
 .goals-knowledgeskill {
