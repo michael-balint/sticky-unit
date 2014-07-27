@@ -12,6 +12,18 @@ var Sticky = DS.Model.extend({
         return "color-1";
       case "goals-enduringunderstanding":
         return "color-2";
+      case "goals-bigidea":
+        return "color-3";
+      case "evidence-knowledge":
+      case "evidence-understanding":
+      case "evidence-idea":
+        return "color-4";
+      case "assessments-performancetasks":
+      case "assessments-academicprompts":
+      case "assessments-quiztest":
+        return "color-5";
+      case "activities-listofassessments":
+        return "color-6";
       default:
         return "color-0";
     }

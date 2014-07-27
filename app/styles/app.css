@@ -241,7 +241,15 @@ h3, b {
 }
 
 .color-4 {
-  background-color: #80df87;
+  background-color: #f6d500;
+}
+
+.color-5 {
+  background-color: #f39019;
+}
+
+.color-6 {
+  background-color: #ec5d57;
 }
 
 a:link {
