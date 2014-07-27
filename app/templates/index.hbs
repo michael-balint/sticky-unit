@@ -1,18 +1,16 @@
 <div class="container-fluid index">
-  <div class="header row">
-    <span class="title">
-      Unit: {{input valueBinding="unit.title" class="title-input" sizeBinding="unit.titleLength"}}
-    </span>
-    <button class="btn btn-warning btn-standards" {{action 'openModal' 'standards' 'modal'}}>Choose my standards</button>
-  </div>
   <div class="logo">
     <a href="/">
-      <img height="80" src="/img/StickyUnitLogo.png">
+      <img src="/img/StickyUnit.png">
     </a>
   </div>
-  {{#if unit.standard}}
-    <div class="header row">
-      <div class="panel panel-info panel-standards">
+  <div class="header row">
+    <span class="title">
+      {{input valueBinding="unit.title" placeholder="<type your unit name>" class="title-input" sizeBinding="unit.titleLength"}}
+    </span>
+    <button class="btn btn-primary btn-standards" {{action 'openModal' 'standards' 'modal'}}>Choose my standards</button>
+    {{#if unit.standard}}
+      <div class="panel panel-default panel-standards">
         <div class="panel-heading cursor-pointer" data-toggle="collapse" href="#collapseStandards">
           <h4 class="panel-title">
             {{unit.standard}}
@@ -25,10 +23,10 @@
           </div>
         </div>
       </div>
+    {{/if}}
   </div>
-  {{/if}}
 
-  <div class="whiteboard">
+  <div class="whiteboard row">
     <div class="row">
       <!-- GOALS ROW -->
 
@@ -161,5 +159,12 @@
         {{view 'stickystack' section="activities-listofassessments"}}
       </div>
     </div>
+  </div>
+
+
+  <div class="row">
+    <button class="btn btn-success pull-right">
+      Export my work!
+    </button>
   </div>
 </div>

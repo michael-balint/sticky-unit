@@ -19,6 +19,7 @@ var app = new EmberApp();
 app.import('vendor/bootstrap/js/transition.js');
 app.import('vendor/bootstrap/js/collapse.js');
 app.import('vendor/bootstrap/dist/css/bootstrap.min.css');
+app.import('vendor/bootstrap/dist/css/bootstrap-theme.min.css');
 app.import('vendor/bootstrap/dist/css/bootstrap.css.map');
 
 module.exports = app.toTree();
