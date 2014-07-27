@@ -1,141 +1,147 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div class="container-fluid index">
+  <div class="header row">
+    <ul class="list-inline">
+      <li>
+        <h1>Unit Title</h1>
+      </li>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta name="generator" content=
-  "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+      <li>
+        <ul class="list-unstyled">
+          <li><button class="btn btn-default btn-block" type="button">Choose
+          Standards</button></li>
 
-  <title>StickyUnit</title>
-</head>
+          <li><button class="btn btn-default btn-block" type="button">Choose
+          Practices</button></li>
+        </ul>
+      </li>
 
-<body>
-  <div class="container-fluid index">
-    <div class="header">
-      <div class="row">
+      <li>
+        <ul class="list-unstyled">
+          <li><button class="btn btn-default btn-block dropdown-toggle"
+          data-toggle="dropdown" id="dropdownMenu1" type="button">Cluster
+          Title</button></li>
 
-       <ul class="list-inline">
-        <li><h1>Unit Title</h1></li>
-        <li>
-          <ul class="list-unstyled">
-            <li>
-              <button type="button" class="btn btn-default btn-block">Choose
-              Standards</button>
-            </li>
-            <li>
-              <button type="button" class="btn btn-default btn-block">Choose
-              Practices</button>
-            </li>
-          </ul>
-        <li>
-          <ul class="list-unstyled">
-            <li>
-              <button class="btn btn-default btn-block dropdown-toggle" type="button"
-              id="dropdownMenu1" data-toggle="dropdown">Cluster Title </button>
-            </li>
-            <li>
-              <button class="btn btn-default btn-block dropdown-toggle" type="button"
-              id="dropdownMenu1" data-toggle="dropdown">Practice Title </button>
-            </li>
-          </ul>
-        </li>
-        <li class="pull-right">
-          <a href="home-route"><img id="logo" src="/img/StickyUnitLogo.png" height="80" /></a>
-        </li>
-       </ul>
+          <li><button class="btn btn-default btn-block dropdown-toggle"
+          data-toggle="dropdown" id="dropdownMenu1" type="button">Practice
+          Title</button></li>
+        </ul>
+      </li>
+
+      <li class="pull-right">
+        <a href="home-route"><img height="80" id="logo" src=
+        "/img/StickyUnitLogo.png"></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="whiteboard">
+    <div class="row">
+      <!-- GOALS ROW -->
+
+      <div class="col-md-12 heading">
+        <h3>GOALS</h3>
+      </div>
+
+      <div class="col-md-4">
+        <b class="section-title">Knowledge and Skills</b><br>
+        <span><a href="home-route">What are Knowledge and Skills?
+        <img height="20" src="/img/videocamera.png"></a></span>
+
+        <div class="sticky center-block cursor-pointer" {{action 'openStickyListModal' 'goals-knowledgeskill'}}>
+          goals-knowledgeskill
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <b class="section-title">Enduring Understandings</b><br>
+        <span><a href="home-route">What are Enduring Understandings?
+        <img height="20" src="/img/videocamera.png"></a></span>
+
+        <div class="sticky center-block"></div>
+      </div>
+
+      <div class="col-md-4">
+        <b class="section-title">Big Idea</b><br>
+        <span><a href="home-route">What is a Big Idea? <img height="20" src=
+        "/img/videocamera.png"></a></span>
+
+        <div class="sticky center-block"></div>
       </div>
     </div>
 
-    <div class="whiteboard">
+    <div class="row">
+      <!-- EVIDENCE ROW -->
 
-      <div class="row"><!-- GOALS ROW -->
-        <div class="col-md-12 heading">
-          <h3>GOALS</h3>
-        </div>
-        <div class="col-md-4"> 
-          <b class="section-title">Knowledge and Skills</b><br />
-          <span><a href="home-route"> What are Knowledge and Skills? <img src="/img/videocamera.png" height="20" /></a></span>
-          <div class="sticky center-block">  
-            {{#link-to "goals-knowledgeskill"}} goals-knowledgeskill {{/link-to}}
-          </div>
-        </div>
-        <div class="col-md-4"> 
-          <b class="section-title">Enduring Understandings</b><br />
-          <span><a href="home-route"> What are Enduring Understandings? <img src="/img/videocamera.png" height="20"></a></span>
-          <div class="sticky center-block">  
-          </div>
-        </div>
-        <div class="col-md-4"> 
-          <b class="section-title">Big Idea</b><br />  
-          <span><a href="home-route"> What is a Big Idea? <img src="/img/videocamera.png" height="20"></a></span>
-          <div class="sticky center-block">  
-          </div>
-        </div>
-      </div> 
-
-      <div class="row"><!-- EVIDENCE ROW -->    
-        <div class="col-md-12 heading">
-          <h3>EVIDENCE</h3>
-        </div>
-        <div class="col-md-4"> 
-          <b class="section-title">Evidence of Knowledge and Skills</b><br />
-          <span><a href="home-route"> How do I create this evidence? <img src="/img/videocamera.png" height="20"></a></span>
-          <div class="sticky center-block">  
-          </div>
-        </div>
-        <div class="col-md-4"> 
-          <b class="section-title">Evidence of Understandings</b><br />
-          <span><a href="home-route">  How do I create this evidence? <img src="/img/videocamera.png" height="20"></a></span>
-          <div class="sticky center-block">  
-          </div>
-        </div>
-        <div class="col-md-4"> 
-          <b class="section-title">Evidence of Big Idea</b><br /> 
-          <span><a href="home-route"> How do I create this evidence? <img src="/img/videocamera.png" height="20"></a></span>
-          <div class="sticky center-block">  
-          </div>
-        </div>
-      </div>
-      
-    <!-- ASSESSMENTS ROW -->
-
-      <div class="row">
-        <div class="col-md-12 heading">
-          <h3>ASSESSMENTS</h3>
-        </div>
-        <div class="col-md-4"> 
-          <b class="section-title">Performance Tasks</b><br />
-          <span><a href="home-route"> What are performance tasks? <img src="/img/videocamera.png" height="20"></a></span>
-          <div class="sticky center-block">
-          </div>
-        </div>
-        <div class="col-md-4"> 
-          <b class="section-title">Academic Prompts</b><br />
-          <span><a href="home-route"> What are academic prompts? <img src="/img/videocamera.png" height="20"></a></span>
-          <div class="sticky center-block">  
-          </div>
-        </div>
-        <div class="col-md-4"> 
-          <b class="section-title">Quizzes and Tests</b><br />
-          <span><a href="home-route"> What are quizzes/tests? <img src="/img/videocamera.png" height="20"></a></span>
-          <div class="sticky center-block">  
-          </div>
-        </div>
+      <div class="col-md-12 heading">
+        <h3>EVIDENCE</h3>
       </div>
 
-    <!-- LEARNING ACTIVITIES ROW -->
+      <div class="col-md-4">
+        <b class="section-title">Evidence of Knowledge and Skills</b><br>
+        <span><a href="home-route">How do I create this evidence?
+        <img height="20" src="/img/videocamera.png"></a></span>
 
-      <div class="row">
-        <div class="col-md-12 heading">
-          <h3>LEARNING ACTIVITIES</h3>
-        </div>
-        <div class="col-md-12"> 
-          <span><a href="home-route"> How do I create learning activities? <img src="/img/videocamera.png" height="20"></a></span>
-          <div class="sticky center-block">  
-          </div>
-        </div>
+        <div class="sticky center-block"></div>
+      </div>
+
+      <div class="col-md-4">
+        <b class="section-title">Evidence of Understandings</b><br>
+        <span><a href="home-route">How do I create this evidence?
+        <img height="20" src="/img/videocamera.png"></a></span>
+
+        <div class="sticky center-block"></div>
+      </div>
+
+      <div class="col-md-4">
+        <b class="section-title">Evidence of Big Idea</b><br>
+        <span><a href="home-route">How do I create this evidence?
+        <img height="20" src="/img/videocamera.png"></a></span>
+
+        <div class="sticky center-block"></div>
+      </div>
+    </div><!-- ASSESSMENTS ROW -->
+
+    <div class="row">
+      <div class="col-md-12 heading">
+        <h3>ASSESSMENTS</h3>
+      </div>
+
+      <div class="col-md-4">
+        <b class="section-title">Performance Tasks</b><br>
+        <span><a href="home-route">What are performance tasks? <img height=
+        "20" src="/img/videocamera.png"></a></span>
+
+        <div class="sticky center-block"></div>
+      </div>
+
+      <div class="col-md-4">
+        <b class="section-title">Academic Prompts</b><br>
+        <span><a href="home-route">What are academic prompts? <img height=
+        "20" src="/img/videocamera.png"></a></span>
+
+        <div class="sticky center-block"></div>
+      </div>
+
+      <div class="col-md-4">
+        <b class="section-title">Quizzes and Tests</b><br>
+        <span><a href="home-route">What are quizzes/tests? <img height="20"
+        src="/img/videocamera.png"></a></span>
+
+        <div class="sticky center-block"></div>
+      </div>
+    </div><!-- LEARNING ACTIVITIES ROW -->
+
+    <div class="row">
+      <div class="col-md-12 heading">
+        <h3>LEARNING ACTIVITIES</h3>
+      </div>
+
+      <div class="col-md-12">
+        <span><a href="home-route">How do I create learning activities?
+        <img height="20" src="/img/videocamera.png"></a></span>
+
+        <div class="sticky center-block"></div>
       </div>
     </div>
   </div>
-</body>
-</html>
+</div>

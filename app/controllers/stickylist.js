@@ -3,6 +3,14 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
   section: "goals-knowledgeskill",
 
+  init: function() {
+    this._super();
+    var list = this;
+    this.store.find("sticky", {section: "goals-knowledgeskill"}).then(function(stickies) {
+      list.set('model', stickies);
+    });
+  },
+
   freshStickyObserver: function() {
     var section = this.get("section");
     var list = this;
@@ -18,4 +26,5 @@ export default Ember.ArrayController.extend({
       list.get("content").pushObject(newSticky);
     }
   }.observes('@each.text')
+
 });

@@ -1,5 +1,14 @@
+.popup-modal {
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  background-color: #fff;
+}
+
 .index {
-  height: 2000px;
   background-image: url('/img/woodBackground.jpg');
 }
 
@@ -60,6 +69,10 @@ a:hover {
 }
 a:active {
   text-decoration: underline;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 /* sections */
 

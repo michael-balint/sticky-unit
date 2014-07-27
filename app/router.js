@@ -5,7 +5,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('goals-knowledgeskill');
+  this.route('application');
 });
 
 export default Router;
