@@ -11,23 +11,19 @@
     </a>
   </div>
   <div class="header row">
-    {{#if unit.standard}}
-      <div class="panel panel-primary panel-standards">
-        <div class="panel-heading cursor-pointer" data-toggle="collapse" data-parent="#accordion" href="#collapseStandards">
-          <h4 class="panel-title">
-            {{unit.standard}}
-          </h4>
+    <div class="panel panel-info panel-standards">
+      <div class="panel-heading cursor-pointer" data-toggle="collapse" href="#collapseStandards">
+        <h4 class="panel-title">
+          {{unit.standard}}
           <span class="pull-right glyphicon glyphicon-chevron-down"></span>
-        </div>
-        <div id="collapseStandards" class="panel-collapse collapse">
-          <div class="panel-body">
-            {{unit.detail}}
-          </div>
+        </h4>
+      </div>
+      <div id="collapseStandards" class="panel-collapse collapse">
+        <div class="panel-body">
+          {{unit.detail}}
         </div>
       </div>
-    {{else}}
-      <button class="btn btn-primary">Choose a Standard</button>
-    {{/if}}
+    </div>
   </div>
 
   <div class="whiteboard">
