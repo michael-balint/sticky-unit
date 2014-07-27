@@ -10,10 +10,12 @@ export default Ember.Route.extend({
     },
 
     openStickyListModal: function(modalName) {
+      var stickylistController = this.controllerFor('stickylist');
+      stickylistController.set("section", modalName);
       return this.render(modalName, {
         into: 'application',
         outlet: 'modal',
-        controller: 'stickylist'
+        controller: stickylistController
       });
     },
 

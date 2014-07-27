@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  section: "goals-knowledgeskill",
-
   init: function() {
     this._super();
     var list = this;
