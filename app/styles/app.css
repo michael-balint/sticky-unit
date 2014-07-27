@@ -63,9 +63,8 @@ h3, b {
   opacity: 0.5;
 }
 
-.stack {
+.stack-section {
   margin-top: 10px;
-  cursor: pointer;
   min-height: 240px;
 }
 
@@ -78,63 +77,116 @@ h3, b {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.rotate-0 {
+.stack {
+  cursor: pointer;
 }
 
+.stack:hover .rotate-0 {
+}
+.stack:hover .rotate-1 {
+  transform:rotate(3deg);
+  -ms-transform:rotate(3deg);
+  -webkit-transform:rotate(3deg);
+}
+.stack:hover .rotate-2 {
+  transform:rotate(-3deg);
+  -ms-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+}
+.stack:hover .rotate-3 {
+  transform:rotate(6deg);
+  -ms-transform:rotate(6deg);
+  -webkit-transform:rotate(6deg);
+}
+.stack:hover .rotate-4 {
+  transform:rotate(-6deg);
+  -ms-transform:rotate(-6deg);
+  -webkit-transform:rotate(-6deg);
+}
+.stack:hover .rotate-5 {
+  transform:rotate(9deg);
+  -ms-transform:rotate(9deg);
+  -webkit-transform:rotate(9deg);
+}
+.stack:hover .rotate-6 {
+  transform:rotate(-9deg);
+  -ms-transform:rotate(-9deg);
+  -webkit-transform:rotate(-9deg);
+}
+.stack:hover .rotate-7 {
+  transform:rotate(12deg);
+  -ms-transform:rotate(12deg);
+  -webkit-transform:rotate(12deg);
+}
+.stack:hover .rotate-8 {
+  transform:rotate(-12deg);
+  -ms-transform:rotate(-12deg);
+  -webkit-transform:rotate(-12deg);
+}
+.stack:hover .rotate-9 {
+  transform:rotate(15deg);
+  -ms-transform:rotate(15deg);
+  -webkit-transform:rotate(15deg);
+}
+.stack:hover .rotate-10 {
+  transform:rotate(-15deg);
+  -ms-transform:rotate(-15deg);
+  -webkit-transform:rotate(-15deg);
+}
+
+.rotate-0, .rotate-1, .rotate-2,
+.rotate-3, .rotate-4, .rotate-5,
+.rotate-6, .rotate-7, .rotate-8,
+.rotate-9, .rotate-10 {
+  transition: transform 0.1s;
+}
+.rotate-0 {
+}
 .rotate-1 {
   transform:rotate(7deg);
   -ms-transform:rotate(7deg);
   -webkit-transform:rotate(7deg);
 }
-
 .rotate-2 {
   transform:rotate(-7deg);
   -ms-transform:rotate(-7deg);
   -webkit-transform:rotate(-7deg);
 }
-
 .rotate-3 {
   transform:rotate(14deg);
   -ms-transform:rotate(14deg);
   -webkit-transform:rotate(14deg);
 }
-
 .rotate-4 {
   transform:rotate(-14deg);
   -ms-transform:rotate(-14deg);
   -webkit-transform:rotate(-14deg);
 }
-
 .rotate-5 {
   transform:rotate(21deg);
   -ms-transform:rotate(21deg);
   -webkit-transform:rotate(21deg);
 }
-
 .rotate-6 {
   transform:rotate(-21deg);
   -ms-transform:rotate(-21deg);
   -webkit-transform:rotate(-21deg);
 }
-
 .rotate-7 {
   transform:rotate(28deg);
   -ms-transform:rotate(28deg);
   -webkit-transform:rotate(28deg);
 }
-
 .rotate-8 {
   transform:rotate(-28deg);
   -ms-transform:rotate(-28deg);
   -webkit-transform:rotate(-28deg);
 }
-
 .rotate-9 {
   transform:rotate(35deg);
   -ms-transform:rotate(35deg);
   -webkit-transform:rotate(35deg);
 }
-
 .rotate-10 {
   transform:rotate(-35deg);
   -ms-transform:rotate(-35deg);
