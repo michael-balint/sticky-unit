@@ -38,6 +38,7 @@
 }
 
 .whiteboard {
+  margin-top: 20px;
   background: linear-gradient(#fff, #ddd);
   border: 10px solid #222;
   padding: 20px 40px;
