@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.View.extend({
-  templateName: "views/stickygroup",
+  templateName: "views/stickystack",
 
   section: null,
 
