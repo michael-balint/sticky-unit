@@ -2,13 +2,75 @@
   <div class="pull-right">
     <span class="glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal'}}></span>
   </div>
-  <div>
-    {{unit.title}}
-    {{unit.standard}}
-    {{unit.detail}}
-
-    {{#each goalsKnowledgeSkillStickies}}
-      {{text}}
-    {{/each}}
-  </div>
+  <table>
+    <tr> 
+      <td>{{unit.title}}</td>
+    </tr>
+    <tr>
+      <td> GOALS </td>
+      <td> EVIDENCE </td>
+    </tr>
+    <tr>
+      <td> 
+        <ul> 
+        {{#each goalsKnowledgeSkillStickies}}
+          <li>{{text}}</li>
+        {{/each}}
+        </ul>
+      </td>
+      <td> 
+        <ul> 
+        {{#each evidenceKnowledgeStickies}}
+          <li>{{text}}</li>
+        {{/each}}
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <ul> 
+        {{#each goalsEnduringUnderstandingStickies}}
+          <li>{{text}}</li>
+        {{/each}}
+        </ul>
+      </td>
+      <td> 
+        <ul> 
+        {{#each evidenceUnderstandingStickies}}
+          <li>{{text}}</li>
+        {{/each}}
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <ul> 
+        {{#each goalsBigIdeaStickies}}
+          <li>{{text}}</li>
+        {{/each}}
+        </ul>
+      </td>
+      <td> 
+        <ul> 
+        {{#each evidenceIdeaStickies}}
+          <li>{{text}}</li>
+        {{/each}}
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td> ASSESSMENTS </td>
+      <td> ACTIVITIES </td>
+    </tr>
+    <tr>
+      <td> list of assessments </td>
+      <td> list of activities </td>
+    </tr>
+    <tr> 
+      <td>CONTENT STANDARDS</td>
+    </tr>
+    <tr>
+      <td> {{unit.standard}} </td>
+      <td> {{unit.detail}} </td>
+    </tr>
 </div>
