@@ -41,6 +41,12 @@
   left: 25%;
 }
 
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 .index {
   /*background-image: url('/img/woodBackground.jpg')*/
   /*background: linear-gradient(#d3e9fe, #a0b6cb);*/

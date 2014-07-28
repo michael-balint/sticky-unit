@@ -2,7 +2,16 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   unit: function() {
-    return this.store.find("unit", "main-unit");
+    var unit = this.store.find("unit", "main-unit");
+
+    unit.then(function(unit) {
+      window.changeUnit = function(newUnit) {
+        unit.set('standard', newUnit.standard);
+        unit.set('detail', newUnit.detail);
+      };
+    });
+
+    return unit;
   }.property(),
 
   goalsKnowledgeSkillStickies: function() {
