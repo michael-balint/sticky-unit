@@ -1,0 +1,28 @@
+<div class="fixed-modal popup-modal whiteboard">
+  <div class="sticky-modal-header">
+    <ul class="list-inline">
+      <li>
+        <ul class="list-unstyled">
+          <li><b class="section-title">Evidence of Knowledge and Skills</b></li>
+          <li>
+            <a href="home-route">
+              How do I create this evidence?
+              <i class="glyphicon glyphicon-facetime-video"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <button type="button" class="btn btn-default inspire">Inspire Me <img src="/img/starperson.png" height="20"></button>
+      </li>
+      <li class="pull-right">
+        <span class="glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal'}}></span>
+      </li>
+    </ul>
+  </div>
+  <div>
+    {{#each}}
+      {{view "editsticky" contentBinding="this"}}
+    {{/each}}
+  </div>
+</div>
