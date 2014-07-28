@@ -319,3 +319,20 @@ a:active {
 .goals-knowledgeskill {
   padding: 20px;
 }
+
+
+table, th, td {
+   border: 1px solid black;
+   padding: 5px;
+}
+
+th {
+  background-color: #D8D8D8;
+}
+
+table {
+  margin-top: 15px;
+  table-layout: fixed;
+  width: 100%;
+}
+

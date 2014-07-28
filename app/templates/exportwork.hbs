@@ -1,25 +1,23 @@
 <div class="fixed-modal paper-modal paper">
-  <div class="pull-right">
-    <span class="glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal'}}></span>
-  </div>
+ <div class="close glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal'}}></div>
   <table>
     <tr> 
-      <td>{{unit.title}}</td>
+      <td colspan="2">{{unit.title}}</td>
     </tr>
     <tr>
-      <td> GOALS </td>
-      <td> EVIDENCE </td>
+      <th> GOALS </th>
+      <th> EVIDENCE </th>
     </tr>
     <tr>
       <td> 
-        <ul> 
+        <ul class="list-unstyled"> 
         {{#each goalsKnowledgeSkillStickies}}
           <li>{{text}}</li>
         {{/each}}
         </ul>
       </td>
       <td> 
-        <ul> 
+        <ul class="list-unstyled"> 
         {{#each evidenceKnowledgeStickies}}
           <li>{{text}}</li>
         {{/each}}
@@ -28,14 +26,14 @@
     </tr>
     <tr>
       <td> 
-        <ul> 
+        <ul class="list-unstyled"> 
         {{#each goalsEnduringUnderstandingStickies}}
           <li>{{text}}</li>
         {{/each}}
         </ul>
       </td>
       <td> 
-        <ul> 
+        <ul class="list-unstyled"> 
         {{#each evidenceUnderstandingStickies}}
           <li>{{text}}</li>
         {{/each}}
@@ -44,14 +42,14 @@
     </tr>
     <tr>
       <td> 
-        <ul> 
+        <ul class="list-unstyled"> 
         {{#each goalsBigIdeaStickies}}
           <li>{{text}}</li>
         {{/each}}
         </ul>
       </td>
       <td> 
-        <ul> 
+        <ul class="list-unstyled"> 
         {{#each evidenceIdeaStickies}}
           <li>{{text}}</li>
         {{/each}}
@@ -59,15 +57,15 @@
       </td>
     </tr>
     <tr>
-      <td> ASSESSMENTS </td>
-      <td> ACTIVITIES </td>
+      <th> ASSESSMENTS </th>
+      <th> ACTIVITIES </th>
     </tr>
     <tr>
       <td> list of assessments </td>
       <td> list of activities </td>
     </tr>
     <tr> 
-      <td>CONTENT STANDARDS</td>
+      <th colspan="2">CONTENT STANDARDS</th>
     </tr>
     <tr>
       <td> {{unit.standard}} </td>
