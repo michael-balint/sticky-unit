@@ -6,7 +6,7 @@
   </div>
   <div class="header row">
     <span class="title">
-      {{input valueBinding="unit.title" placeholder="<type your unit name>" class="title-input" sizeBinding="unit.titleLength"}}
+      {{input valueBinding="unit.title" placeholder="<name my unit>" class="title-input" sizeBinding="unit.titleLength"}}
     </span>
     <button class="btn btn-primary btn-standards" {{action 'openModal' 'standards' 'modal'}}>Choose my standards</button>
     {{#if unit.standard}}

@@ -60,7 +60,8 @@
 
 .title-input {
   font-size: 36px;
-  padding: 0px 10px;
+  padding: 0px;
+  padding-left: 10px;
   background-color: rgba(255, 255, 255, 0.6);
   width: auto;
   border: none;

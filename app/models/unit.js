@@ -10,7 +10,7 @@ var Unit = DS.Model.extend({
     if(l) {
       return this.get('title.length');
     } else {
-      return 19;
+      return 13;
     }
   }.property('title')
 });
