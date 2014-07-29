@@ -76,7 +76,7 @@
 .index {
   /*background-image: url('/img/woodBackground.jpg')*/
   /*background: linear-gradient(#d3e9fe, #a0b6cb);*/
-  background: url(http://subtlepatterns.com/patterns/tileable_wood_texture.png);
+  background: url(/img/tileable_wood_texture.png);
 }
 
 .title {
