@@ -154,6 +154,7 @@ h3, b {
   border: 0px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  overflow-y: auto;
 }
 
 .shadow {
@@ -184,6 +185,7 @@ h3, b {
   margin: 10px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  overflow-y: auto;
 }
 
 .stack {
