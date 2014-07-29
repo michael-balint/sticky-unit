@@ -1,7 +1,7 @@
 <div class="fixed-modal paper-modal paper">
- <div class="close glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal'}}></div>
+  <div class="close glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal' 'popup-modal'}}></div>
   <table>
-    <tr> 
+    <tr>
       <td colspan="2">{{unit.title}}</td>
     </tr>
     <tr>
@@ -9,15 +9,15 @@
       <th> EVIDENCE </th>
     </tr>
     <tr>
-      <td> 
-        <ul class="list-unstyled"> 
+      <td>
+        <ul class="list-unstyled">
         {{#each goalsKnowledgeSkillStickies}}
           <li>{{text}}</li>
         {{/each}}
         </ul>
       </td>
-      <td> 
-        <ul class="list-unstyled"> 
+      <td>
+        <ul class="list-unstyled">
         {{#each evidenceKnowledgeStickies}}
           <li>{{text}}</li>
         {{/each}}
@@ -25,15 +25,15 @@
       </td>
     </tr>
     <tr>
-      <td> 
-        <ul class="list-unstyled"> 
+      <td>
+        <ul class="list-unstyled">
         {{#each goalsEnduringUnderstandingStickies}}
           <li>{{text}}</li>
         {{/each}}
         </ul>
       </td>
-      <td> 
-        <ul class="list-unstyled"> 
+      <td>
+        <ul class="list-unstyled">
         {{#each evidenceUnderstandingStickies}}
           <li>{{text}}</li>
         {{/each}}
@@ -41,15 +41,15 @@
       </td>
     </tr>
     <tr>
-      <td> 
-        <ul class="list-unstyled"> 
+      <td>
+        <ul class="list-unstyled">
         {{#each goalsBigIdeaStickies}}
           <li>{{text}}</li>
         {{/each}}
         </ul>
       </td>
-      <td> 
-        <ul class="list-unstyled"> 
+      <td>
+        <ul class="list-unstyled">
         {{#each evidenceIdeaStickies}}
           <li>{{text}}</li>
         {{/each}}
@@ -64,7 +64,7 @@
       <td> list of assessments </td>
       <td> list of activities </td>
     </tr>
-    <tr> 
+    <tr>
       <th colspan="2">CONTENT STANDARDS</th>
     </tr>
     <tr>

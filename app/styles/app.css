@@ -42,7 +42,7 @@
 }
 
 .popup-modal {
-  z-index: 100;
+  z-index: 200;
   width: 90%;
   height: 90%;
   left: 5%;

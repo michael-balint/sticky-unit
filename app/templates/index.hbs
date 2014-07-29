@@ -8,7 +8,7 @@
     <span class="title">
       {{input valueBinding="unit.title" placeholder="<name my unit>" class="title-input" sizeBinding="unit.titleLength"}}
     </span>
-    <button class="btn btn-primary btn-standards" {{action 'openModal' 'standards' 'modal'}}>Choose my standards</button>
+    <button class="btn btn-primary btn-standards" {{action 'openModal' 'standards' 'popup-modal'}}>Choose my standards</button>
     {{#if unit.standard}}
       <div class="panel panel-default panel-standards">
         <div class="panel-heading cursor-pointer" data-toggle="collapse" href="#collapseStandards">
@@ -157,7 +157,7 @@
 
 
   <div class="footer row">
-    <button class="btn btn-success btn-export center-block" {{action 'openModal' 'exportwork' 'modal'}}>
+    <button class="btn btn-success btn-export center-block" {{action 'openModal' 'exportwork' 'popup-modal'}}>
       Export my work!
     </button>
   </div>
