@@ -16,6 +16,14 @@
   top: 480px;
 }
 
+.row-2-modal {
+  top: 870px;
+}
+
+.row-3-modal {
+  top: 1260px;
+}
+
 .modal-bg {
   position: fixed;
   top: 0px;

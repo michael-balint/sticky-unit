@@ -1,0 +1,28 @@
+<div class="row-modal row-3-modal whiteboard">
+  <div class="sticky-modal-header">
+    <ul class="list-inline">
+      <li>
+        <ul class="list-unstyled">
+          <li><b class="section-title">Learning Activities</b></li>
+          <li>
+            <a href="home-route">
+              What are learning activities?
+              <i class="glyphicon glyphicon-facetime-video"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <button type="button" class="btn btn-default inspire">Inspire Me <img src="/img/starperson.png" height="20"></button>
+      </li>
+      <li class="pull-right">
+        <span class="glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal' 'row-3-modal'}}></span>
+      </li>
+    </ul>
+  </div>
+  <div>
+    {{#each}}
+      {{view "editsticky" contentBinding="this"}}
+    {{/each}}
+  </div>
+</div>
