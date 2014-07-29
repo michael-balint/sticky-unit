@@ -33,9 +33,9 @@ var Sticky = DS.Model.extend({
 Sticky.reopenClass({
   FIXTURES: [
     // goals-knowledgeskill
-    { id: "sample-0", text: "some text", section: "goals-knowledgeskill", fresh: false },
-    { id: "sample-1", text: "some text 2", section: "goals-knowledgeskill", fresh: false },
-    { id: "fresh-0", text: "", section: "goals-knowledgeskill", fresh: true }
+    //{ id: "sample-0", text: "some text", section: "goals-knowledgeskill", fresh: false },
+    //{ id: "sample-1", text: "some text 2", section: "goals-knowledgeskill", fresh: false },
+    //{ id: "fresh-0", text: "", section: "goals-knowledgeskill", fresh: true }
   ]
 });
 
