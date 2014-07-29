@@ -1,4 +1,4 @@
-<div {{action 'openStickyListModal' view.section 'modal'}} class="stack-section">
+<div {{action 'openStickyListModal' view.section view.modalName}} class="stack-section">
   <div class="stack">
     {{#each view.stickies}}
       {{view "sticky" contentBinding="this"}}

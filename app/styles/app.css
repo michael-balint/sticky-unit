@@ -1,3 +1,21 @@
+.row-modal {
+  position: absolute;
+  margin: 0px 30px;
+  padding: 20px;
+  z-index: 100;
+  width: calc(100% - 60px);
+  height: 380px;
+  overflow-y: auto;
+}
+
+.row-0-modal {
+  top: 90px;
+}
+
+.row-1-modal {
+  top: 480px;
+}
+
 .modal-bg {
   position: fixed;
   top: 0px;
@@ -122,8 +140,8 @@ h3, b {
 }
 
 .sticky {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   margin: 10px;
   border: 0px;
   padding: 10px;

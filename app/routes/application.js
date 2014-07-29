@@ -11,7 +11,8 @@ export default Ember.Route.extend({
     },
 
     openStickyListModal: function(modalName, outlet) {
-      var stickylistController = this.controllerFor('stickylist');
+
+      var stickylistController = this.controllerFor(outlet);
       var route = this;
       this.store.filter("sticky", {section: modalName}, function(sticky) {
         return sticky.get("section") === modalName;
@@ -26,9 +27,9 @@ export default Ember.Route.extend({
       });
     },
 
-    closeModal: function() {
+    closeModal: function(modalName) {
       return this.disconnectOutlet({
-        outlet: 'modal',
+        outlet: modalName,
         parentView: 'application',
       });
     },

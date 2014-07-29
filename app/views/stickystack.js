@@ -35,5 +35,27 @@ export default Ember.View.extend({
       });
       newSticky.save();
     }
-  }.observes('freshStickies.length')
+  }.observes('freshStickies.length'),
+
+  modalName: function() {
+    var section = this.get('section');
+    switch(section) {
+      case "goals-knowledgeskill":
+      case "goals-enduringunderstanding":
+      case "goals-bigidea":
+        return "row-0-modal";
+      case "evidence-knowledge":
+      case "evidence-understanding":
+      case "evidence-idea":
+        return "row-1-modal";
+      case "assessments-performancetasks":
+      case "assessments-academicprompts":
+      case "assessments-quiztest":
+        return "row-2-modal";
+      case "activities-listofassessments":
+        return "row-3-modal";
+      default:
+        return "row-0-modal";
+    }
+  }.property('section')
 });
