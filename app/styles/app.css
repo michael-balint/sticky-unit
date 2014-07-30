@@ -157,6 +157,10 @@ h3, b {
   overflow-y: auto;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .shadow {
   -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
   -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);

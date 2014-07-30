@@ -4,6 +4,7 @@ var Sticky = DS.Model.extend({
   text: DS.attr('string'),
   section: DS.attr('string'),
   fresh: DS.attr('boolean'),
+  stickies: DS.hasMany('sticky'),
 
   color: function() {
     var section = this.get('section');

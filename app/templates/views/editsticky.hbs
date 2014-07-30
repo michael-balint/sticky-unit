@@ -1,1 +1,4 @@
-{{!textarea valueBinding="text" classNames="sticky"}}
+{{textarea valueBinding="text" classNameBindings=":sticky :inline-block view.fade color"}}
+{{#if selectOptions}}
+  {{view Ember.Select contentBinding=selectOptions classNames="inline-block"}}
+{{/if}}

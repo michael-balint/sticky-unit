@@ -18,6 +18,7 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 app.import('vendor/bootstrap/js/transition.js');
 app.import('vendor/bootstrap/js/collapse.js');
+app.import('vendor/bootstrap/js/carousel.js');
 app.import('vendor/bootstrap/dist/css/bootstrap.min.css');
 app.import('vendor/bootstrap/dist/css/bootstrap-theme.min.css');
 app.import('vendor/bootstrap/dist/css/bootstrap.css.map');

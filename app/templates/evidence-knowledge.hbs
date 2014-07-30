@@ -21,8 +21,10 @@
     </ul>
   </div>
   <div>
-    {{#each}}
-      {{view "editsticky" contentBinding="this"}}
-    {{/each}}
+    {{#with correspondingStickiesTextArray as selectOptions}}
+      {{#each}}
+        {{view "editsticky" contentBinding="this" selectOptions=selectOptions}}
+      {{/each}}
+    {{/with}}
   </div>
 </div>
