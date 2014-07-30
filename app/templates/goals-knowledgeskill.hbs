@@ -5,7 +5,7 @@
         <ul class="list-unstyled">
           <li><b class="section-title">Knowledge and Skills</b></li>
           <li>
-            <a href="home-route">
+            <a href="#" {{action 'showVideo'}}>
                What are Knowledge and Skills?
               <i class="glyphicon glyphicon-facetime-video"></i>
             </a>
@@ -21,6 +21,9 @@
     </ul>
  	</div>
   <div>
+    {{#if videoVisible}}
+      Video Here <span {{action 'hideVideo'}} class="cursor-pointer">x</span>
+    {{/if}}
     {{#each}}
       {{view "editsticky" contentBinding="this"}}
     {{/each}}

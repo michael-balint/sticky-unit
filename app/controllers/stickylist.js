@@ -21,5 +21,16 @@ export default Ember.ArrayController.extend({
       textArr.pushObjects(stickies.mapProperty('text'));
     });
     return textArr;
-  }.property('correspondingStickies.@each.text')
+  }.property('correspondingStickies.@each.text'),
+
+  videoVisible: false,
+
+  actions: {
+    showVideo: function() {
+      this.set('videoVisible', true);
+    },
+    hideVideo: function() {
+      this.set('videoVisible', false);
+    }
+  }
 });
