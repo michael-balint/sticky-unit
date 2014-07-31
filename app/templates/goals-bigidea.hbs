@@ -5,7 +5,7 @@
         <ul class="list-unstyled">
           <li><b class="section-title">Big Idea</b></li>
           <li>
-            <a href="home-route">
+             <a href="#" {{action 'showVideo'}}>
               What is a Big Idea?
               <i class="glyphicon glyphicon-facetime-video"></i>
             </a>
@@ -24,7 +24,7 @@
     <ul class="list-inline">
       {{#if videoVisible}}
         <li>
-          Video Here <span {{action 'hideVideo'}} class="cursor-pointer">x</span>
+          <iframe src="//player.vimeo.com/video/100863459" width="400px" height ="200px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <span {{action 'hideVideo'}} class="cursor-pointer">x</span>
         </li>
       {{/if}}
       {{#each}}
