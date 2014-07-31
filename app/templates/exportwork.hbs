@@ -1,75 +1,32 @@
 <div class="fixed-modal paper-modal paper">
   <div class="close glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal' 'popup-modal'}}></div>
-  <table>
-    <tr>
-      <td colspan="2">{{unit.title}}</td>
-    </tr>
-    <tr>
-      <th> GOALS </th>
-      <th> EVIDENCE </th>
-    </tr>
-    <tr>
-      <td>
-        <ul class="list-unstyled">
-        {{#each goalsKnowledgeSkillStickies}}
-          <li>{{text}}</li>
+  <ul class="list-unstyled">
+    <li><strong>Unit:</strong> {{unit.title}}</li>
+    <li><strong>Standard:</strong> {{unit.standard}}</li>
+    <li><strong>Standard Detail:</strong> {{unit.detail}}</li>
+  </ul>
+  <ul class="list-unstyled">
+    {{#each assessments}}
+      {{#if isAssessment}}
+        <li><strong>Assessment:</strong> {{text}}</li>
+        <li><ul>
+        {{#each stickies}}
+          {{#if isEvidence}}
+            <li><strong>Evidence:</strong> {{text}}</li>
+            <li><ul>
+              {{#each stickies}}
+                {{#if isGoal}}
+                  <li><strong>Goal</strong> {{text}}</li>
+                {{/if}}
+              {{/each}}
+            </ul></li>
+          {{/if}}
+          {{#if isActivity}}
+            <li><strong>Learning Activity:</strong> {{text}}</li>
+          {{/if}}
         {{/each}}
-        </ul>
-      </td>
-      <td>
-        <ul class="list-unstyled">
-        {{#each evidenceKnowledgeStickies}}
-          <li>{{text}}</li>
-        {{/each}}
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <ul class="list-unstyled">
-        {{#each goalsEnduringUnderstandingStickies}}
-          <li>{{text}}</li>
-        {{/each}}
-        </ul>
-      </td>
-      <td>
-        <ul class="list-unstyled">
-        {{#each evidenceUnderstandingStickies}}
-          <li>{{text}}</li>
-        {{/each}}
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <ul class="list-unstyled">
-        {{#each goalsBigIdeaStickies}}
-          <li>{{text}}</li>
-        {{/each}}
-        </ul>
-      </td>
-      <td>
-        <ul class="list-unstyled">
-        {{#each evidenceIdeaStickies}}
-          <li>{{text}}</li>
-        {{/each}}
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th> ASSESSMENTS </th>
-      <th> ACTIVITIES </th>
-    </tr>
-    <tr>
-      <td> list of assessments </td>
-      <td> list of activities </td>
-    </tr>
-    <tr>
-      <th colspan="2">CONTENT STANDARDS</th>
-    </tr>
-    <tr>
-      <td> {{unit.standard}} </td>
-      <td> {{unit.detail}} </td>
-    </tr>
-  </table>
+        </ul></li>
+      {{/if}}
+    {{/each}}
+  </ul>
 </div>

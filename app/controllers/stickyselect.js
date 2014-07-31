@@ -7,8 +7,10 @@ export default Ember.ArrayController.extend({
       var stickies = forSticky.get("stickies");
       if(stickies.filterBy('id', sticky.get('id')).length) {
         stickies.removeObject(sticky);
+        sticky.set("selected", false);
       } else {
         stickies.addObject(sticky);
+        sticky.set("selected", true);
       }
     }
   }

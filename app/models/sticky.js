@@ -5,6 +5,7 @@ var Sticky = DS.Model.extend({
   section: DS.attr('string'),
   fresh: DS.attr('boolean'),
   stickies: DS.hasMany('sticky'),
+  selected: DS.attr('boolean'),
 
   color: function() {
     var section = this.get('section');
@@ -30,20 +31,46 @@ var Sticky = DS.Model.extend({
     }
   }.property('section'),
 
+  isGoal: function() {
+    var section = this.get('section').toString();
+    var fresh = this.get('fresh');
+    return (section.indexOf('goals-') > -1) && !fresh;
+  }.property('section', 'fresh'),
+
+  isEvidence: function() {
+    var section = this.get('section').toString();
+    var fresh = this.get('fresh');
+    return (section.indexOf('evidence-') > -1) && !fresh;
+  }.property('section', 'fresh'),
+
+  isAssessment: function() {
+    var section = this.get('section').toString();
+    var fresh = this.get('fresh');
+    return (section.indexOf('assessments-') > -1) && !fresh;
+  }.property('section', 'fresh'),
+
+  isActivity: function() {
+    var section = this.get('section').toString();
+    var fresh = this.get('fresh');
+    return (section.indexOf('activities-') > -1) && !fresh;
+  }.property('section', 'fresh'),
+
   shortText: function() {
     var text = this.get('text');
-    if(text.length > 20)
+    if(text.length > 20) {
       return text.slice(0,20);
-    else
+    } else {
       return text;
+    }
   }.property('text'),
 
   selectedClass: function() {
-    if(this.get("stickies.length"))
+    if(this.get("selected")) {
       return "selected";
-    else
+    } else {
       return "";
-  }.property('stickies.length')
+    }
+  }.property('selected')
 });
 
 Sticky.reopenClass({
