@@ -37,6 +37,36 @@ export default Ember.Route.extend({
       });
     },
 
+    openLearningActivitiesModal: function() {
+      var stickylistController = this.controllerFor('activities-listofassessments');
+      var route = this;
+      this.store.filter("sticky", function(sticky) {
+        var section = sticky.get('section');
+        var fresh = sticky.get('fresh');
+        return !fresh && (section === 'assessments-academicprompts' ||
+          section === 'assessments-performancetasks' ||
+          section === 'assessments-quiztest');
+      }).then(function(stickies) {
+        stickylistController.set("section", 'activities-listofassessments');
+        stickylistController.set("content", stickies);
+        route.render('activities-listofassessments', {
+          into: 'application',
+          outlet: 'row-3-modal',
+          controller: stickylistController
+        });
+      });
+    },
+
+    openMakeLearningActivitiesModal: function(sticky) {
+      var stickylistController = this.controllerFor('activities-listofassessments-make');
+      stickylistController.set("sticky", sticky);
+      this.render('activities-listofassessments-make', {
+        into:'application',
+        outlet: 'row-3-modal-2',
+        controller: stickylistController
+      });
+    },
+
     closeModal: function(modalName) {
       return this.disconnectOutlet({
         outlet: modalName,

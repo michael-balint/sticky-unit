@@ -1,0 +1,17 @@
+<div class="row-modal row-3-modal whiteboard">
+  <span class="pull-right glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal' 'row-3-modal-2'}}></span>
+  <ul class="list-inline">
+    {{#with sticky}}
+      <li>
+        <div {{bind-attr class=":sticky color"}}>
+          {{text}}
+        </div>
+      </li>
+    {{/with}}
+    {{#each sticky.stickies}}
+      <li>
+        {{view "editsticky" contentBinding="this"}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

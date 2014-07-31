@@ -1,10 +1,23 @@
-<div {{action 'openStickyListModal' view.section view.modalName}} class="stack-section">
-  <div class="stack">
-    {{#each view.stickies}}
-      {{view "sticky" contentBinding="this"}}
-    {{/each}}
-    {{#unless view.stickies}}
-      {{view "sticky" contentBinding="view.freshStickies.firstObject"}}
-    {{/unless}}
+{{#if view.activitiesSection}}
+  <div {{action 'openLearningActivitiesModal'}} class="stack-section">
+    <div class="stack">
+      {{#each view.stickies}}
+        {{view "sticky" contentBinding="this"}}
+      {{/each}}
+      {{#unless view.stickies}}
+        {{view "sticky" contentBinding="view.freshStickies.firstObject"}}
+      {{/unless}}
+    </div>
   </div>
-</div>
+{{else}}
+  <div {{action 'openStickyListModal' view.section view.modalName}} class="stack-section">
+    <div class="stack">
+      {{#each view.stickies}}
+        {{view "sticky" contentBinding="this"}}
+      {{/each}}
+      {{#unless view.stickies}}
+        {{view "sticky" contentBinding="view.freshStickies.firstObject"}}
+      {{/unless}}
+    </div>
+  </div>
+{{/if}}

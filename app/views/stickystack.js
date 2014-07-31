@@ -24,8 +24,6 @@ export default Ember.View.extend({
 
   makeFreshStickies: function() {
     if(!this.get("freshStickies.length")) {
-      //console.log("no stickies for " + this.get("section") + ", creating one");
-
       var section = this.get('section');
       var store = this.get('controller').get('store');
       var newSticky = store.createRecord('sticky', {

@@ -14,11 +14,5 @@ export default Ember.Controller.extend({
     });
 
     return unit;
-  }.property(),
-
-  goalsKnowledgeSkillStickies: function() {
-    return this.store.filter('sticky', {section: "goals-knowledgeskill"}, function(sticky) {
-      return sticky.get('section') === "goals-knowledgeskill";
-    });
   }.property()
 });
