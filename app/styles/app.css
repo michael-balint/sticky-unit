@@ -157,6 +157,12 @@ h3, b {
   overflow-y: auto;
 }
 
+.multiselect {
+  width: 200px;
+  margin-left: 10px;
+  border: 1px solid #000;
+}
+
 .inline-block {
   display: inline-block;
 }

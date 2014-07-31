@@ -1,4 +1,21 @@
-{{textarea valueBinding="text" classNameBindings=":sticky :inline-block view.fade color"}}
-{{#if selectOptions}}
-  {{view Ember.Select contentBinding=selectOptions classNames="inline-block"}}
-{{/if}}
+<ul class="list-unstyled">
+  <li>
+    {{textarea valueBinding="text" classNameBindings=":sticky :inline-block view.fade color"}}
+  </li>
+  {{#if view.selectOptions}}
+    <li style="padding-left:10px;">
+      Select stickies...
+    </li>
+    <li>
+      {{view "selectsticky"
+        viewName="select"
+        multiple="true"
+        contentBinding="view.selectOptions"
+        sticky=this
+        selectionBinding="stickies"
+        optionLabelPath="content.shortText"
+        optionValuePath="content.id"
+        classNames="multiselect"}}
+    </li>
+  {{/if}}
+</ul>

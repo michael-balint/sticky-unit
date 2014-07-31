@@ -12,7 +12,7 @@ export default Ember.Route.extend({
 
     openStickyListModal: function(modalName, outlet) {
 
-      var stickylistController = this.controllerFor(outlet);
+      var stickylistController = this.controllerFor(modalName);
       var route = this;
       this.store.filter("sticky", {section: modalName}, function(sticky) {
         return sticky.get("section") === modalName;

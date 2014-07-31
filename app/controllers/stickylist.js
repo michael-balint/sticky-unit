@@ -10,18 +10,11 @@ export default Ember.ArrayController.extend({
   }.observes('@each.text'),
 
   correspondingStickies: function() {
-    return this.store.filter("sticky", {section: "goals-knowledgeskill"}, function(sticky) {
-      return sticky.get("section") === "goals-knowledgeskill";
+    var correspondingSection = this.get('correspondingSection');
+    return this.store.filter("sticky", {section: correspondingSection}, function(sticky) {
+      return sticky.get("section") === correspondingSection && !sticky.get("fresh");
     });
-  }.property('section'),
-
-  correspondingStickiesTextArray: function() {
-    var textArr = [];
-    this.get('correspondingStickies').then(function(stickies) {
-      textArr.pushObjects(stickies.mapProperty('text'));
-    });
-    return textArr;
-  }.property('correspondingStickies.@each.text'),
+  }.property(),
 
   videoVisible: false,
 

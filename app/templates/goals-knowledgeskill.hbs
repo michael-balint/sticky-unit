@@ -20,12 +20,14 @@
       </li>
     </ul>
  	</div>
-  <div>
+  <ul class="list-inline">
     {{#if videoVisible}}
-      Video Here <span {{action 'hideVideo'}} class="cursor-pointer">x</span>
+      <li>
+        Video Here <span {{action 'hideVideo'}} class="cursor-pointer">x</span>
+      </li>
     {{/if}}
     {{#each}}
       {{view "editsticky" contentBinding="this"}}
     {{/each}}
-  </div>
+  </ul>
 </div>

@@ -20,11 +20,13 @@
       </li>
     </ul>
   </div>
-  <div>
-    {{#with correspondingStickiesTextArray as selectOptions}}
+  <ul class="list-inline">
+    {{#with correspondingStickies as selectOptions}}
       {{#each}}
-        {{view "editsticky" contentBinding="this" selectOptions=selectOptions}}
+        {{view "editsticky"
+          contentBinding="this"
+          selectOptionsBinding="selectOptions"}}
       {{/each}}
     {{/with}}
-  </div>
+  </ul>
 </div>

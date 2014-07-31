@@ -28,7 +28,15 @@ var Sticky = DS.Model.extend({
       default:
         return "color-0";
     }
-  }.property('section')
+  }.property('section'),
+
+  shortText: function() {
+    var text = this.get('text');
+    if(text.length > 20)
+      return text.slice(0,20);
+    else
+      return text;
+  }.property('text')
 });
 
 Sticky.reopenClass({
