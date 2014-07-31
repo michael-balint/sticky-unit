@@ -1,3 +1,5 @@
 import StickylistController from './stickylist';
 
-export default StickylistController.extend({});
+export default StickylistController.extend({
+  correspondingSection: "evidence-idea"
+});

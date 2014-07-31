@@ -36,7 +36,14 @@ var Sticky = DS.Model.extend({
       return text.slice(0,20);
     else
       return text;
-  }.property('text')
+  }.property('text'),
+
+  selectedClass: function() {
+    if(this.get("stickies.length"))
+      return "selected";
+    else
+      return "";
+  }.property('stickies.length')
 });
 
 Sticky.reopenClass({

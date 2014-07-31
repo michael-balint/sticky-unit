@@ -20,14 +20,18 @@
       </li>
     </ul>
  	</div>
-  <ul class="list-inline">
-    {{#if videoVisible}}
-      <li>
-        Video Here <span {{action 'hideVideo'}} class="cursor-pointer">x</span>
-      </li>
-    {{/if}}
-    {{#each}}
-      {{view "editsticky" contentBinding="this"}}
-    {{/each}}
-  </ul>
+  <div class="row-modal-content">
+    <ul class="list-inline">
+      {{#if videoVisible}}
+        <li>
+          Video Here <span {{action 'hideVideo'}} class="cursor-pointer">x</span>
+        </li>
+      {{/if}}
+      {{#each}}
+        <li>
+          {{view "editsticky" contentBinding="this"}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

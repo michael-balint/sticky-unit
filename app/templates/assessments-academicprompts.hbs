@@ -20,9 +20,29 @@
       </li>
     </ul>
   </div>
-  <div>
-    {{#each}}
-      {{view "editsticky" contentBinding="this"}}
-    {{/each}}
+  <div class="row-modal-content">
+    <ul class="list-inline">
+      {{#if videoVisible}}
+        <li>
+          Video Here <span {{action 'hideVideo'}} class="cursor-pointer">x</span>
+        </li>
+      {{/if}}
+      {{#with correspondingStickies as selectOptions}}
+        {{#each}}
+          <li>
+            <ul class="list-unstyled">
+              <li>
+                {{view "editsticky"
+                  contentBinding="this"
+                  selectOptionsBinding="selectOptions"}}
+              </li>
+              <li>
+                <button {{action "openStickySelectModal" selectOptions this}} class="btn btn-primary btn-sm" style="margin-left:10px">match stickies</button>
+              </li>
+            </ul>
+          </li>
+        {{/each}}
+      {{/with}}
+    </ul>
   </div>
 </div>

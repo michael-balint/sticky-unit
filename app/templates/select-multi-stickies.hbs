@@ -1,0 +1,19 @@
+<div class="fixed-modal popup-modal whiteboard">
+  <div class="sticky-modal-header">
+    <ul class="list-inline">
+      <li>Select corresponding stickies...</li>
+      <li class="pull-right">
+        <span class="glyphicon glyphicon-remove cursor-pointer" {{action 'closeModal' 'select-modal'}}></span>
+      </li>
+    </ul>
+  </div>
+  <ul class="list-inline">
+    {{#each}}
+      <li>
+        <div {{bind-attr class=":sticky :cursor-pointer color selectedClass"}} {{action "toggleSelected" this}}>
+          {{text}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>

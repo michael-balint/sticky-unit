@@ -11,7 +11,6 @@ export default Ember.Route.extend({
     },
 
     openStickyListModal: function(modalName, outlet) {
-
       var stickylistController = this.controllerFor(modalName);
       var route = this;
       this.store.filter("sticky", {section: modalName}, function(sticky) {
@@ -24,6 +23,17 @@ export default Ember.Route.extend({
           outlet: outlet,
           controller: stickylistController
         });
+      });
+    },
+
+    openStickySelectModal: function(stickySelectOptions, forSticky) {
+      var stickyselectController = this.controllerFor('stickyselect');
+      stickyselectController.set('content', stickySelectOptions);
+      stickyselectController.set('forSticky', forSticky);
+      this.render('select-multi-stickies', {
+        into: 'application',
+        outlet: 'select-modal',
+        controller: stickyselectController
       });
     },
 
