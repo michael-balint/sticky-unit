@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
       window.changeUnit = function(newUnit) {
         unit.set('standard', newUnit.standard);
         unit.set('detail', newUnit.detail);
-        controller.send('closeModal');
+        controller.send('closeModal', 'popup-modal');
       };
 
       window.exportData = function() {
